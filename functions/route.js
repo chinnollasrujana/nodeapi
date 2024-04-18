@@ -1,7 +1,7 @@
 const http = require('http');
 const url = require('url');
 module.exports = http.createServer((req, res) => {
-    var foodItemsOps = require('../controller.js');
+    var foodItemsOps = require('./controller.js');
     const reqUrl =  url.parse(req.url, true);
 // GET endpoint
   if(reqUrl.pathname == '/fooditems' && req.method === 'GET') {
